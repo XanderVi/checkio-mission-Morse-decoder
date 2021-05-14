@@ -1,0 +1,53 @@
+<!-- Describe task in general -->
+
+<p>
+    Twoim zadaniem jest odszyfrowanie wiadomości zaszyfrowanej <a href='https://pl.wikipedia.org/wiki/Kod_Morse%E2%80%99a'>kodem Morse'a</a>.<br>
+    Wiadomość składa się z słów oddzielonych trzema spacjami. Litery w słowach oddzielone są pojedynczą spacją.<br>
+    Wiadomość powinna zaczynać się wielką literą, jeśli pierwszym znakiem nie jest cyfra.
+</p>
+
+<p style="text-align: center;">
+    <img  title="Morse decoder" src="{{MEDIA}}example.jpg" alt="example" style="max-height: 283px"/>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Wejście: </strong> String - zaszyfrowana wiadomość.
+</p>
+
+<p>
+    <strong>Wyjście: </strong> String - odszyfrowana wiadomość.
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>Example:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">morseDecoder("... --- -- .   - . -..- -") == "Some text"
+morseDecoder("..--- ----- .---- ---..") == "2018"
+morseDecoder(".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--") == "It was a good day"
+</pre>
+{% else %}
+<pre class="brush: python">morse_decoder("... --- -- .   - . -..- -") == "Some text"
+morse_decoder("..--- ----- .---- ---..") == "2018"
+morse_decoder(".. -   .-- .- ...   .-   --. --- --- -..   -.. .- -.--") == "It was a good day"
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>Do czego jest używane: </strong>
+    W kryptografii i szpiegostwie.
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>Warunek wstępny:</strong>:<br>
+    0 < len(message) < 100<br>
+    Wiadomość składa się wyłącznie z liter alfabetu angielskiego i liczb.
+</p>
